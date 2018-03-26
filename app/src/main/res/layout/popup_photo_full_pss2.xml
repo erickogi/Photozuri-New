@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:layout_marginBottom="70dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="2dp"
+        android:layout_weight="5"
+        android:background="@android:color/black">
+
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+
+        <ProgressBar
+            android:id="@+id/loading"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp" />
+
+        <TextView
+            android:id="@+id/txt_quality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+            android:alpha="0.6"
+            android:background="@color/white"
+            android:padding="2dp"
+            android:text="Low quality "
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/caption"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/image"
+        android:layout_marginBottom="1dp"
+        android:hint="How many"
+        android:inputType="number" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp">
+
+        <Button
+
+            android:id="@+id/ib_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentEnd="true"
+            android:background="@color/material_orange_500"
+            android:padding="3dp"
+            android:text="Save"
+
+
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/ib_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+
+            android:background="@color/material_orange_500"
+            android:padding="3dp"
+            android:text="Dismiss"
+
+            android:textColor="#ffffff"
+
+            />
+    </RelativeLayout>
+</LinearLayout>

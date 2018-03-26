@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cord"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+
+    android:fitsSystemWindows="true"
+    android:padding="0dp"
+    tools:context="com.erickogi14gmail.photozuri.Views.ProductsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="236dp"
+
+        android:background="@drawable/zuri"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingAB_layout"
+            android:layout_width="match_parent"
+            android:layout_height="236dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="#433f51b5"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:statusBarScrim="#433f51b5"
+            app:title="PHOTOzuri">
+
+            <android.support.design.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fitsSystemWindows="true">
+
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+
+                <!--android:id="@+id/image"-->
+
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="42dp"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_gravity="end"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginRight="8dp"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--app:srcCompat="@drawable/ic_person_black_24dp" />-->
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="236dp"
+                    android:background="#433f51b5" />
+            </android.support.design.widget.CoordinatorLayout>
+
+            <android.support.v7.widget.Toolbar
+
+                android:id="@+id/toolbar"
+
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/transparent"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+
+                    android:id="@+id/image"
+
+                    android:layout_width="50dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="4dp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:onClick="resideShow"
+                    app:srcCompat="@drawable/ic_dehaze_black_24dp" />
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+    <!--<android.support.v4.widget.NestedScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+    <!--<FrameLayout-->
+    <!--android:id="@+id/frame_layout"-->
+    <!--android:layout_width="match_parent"-->
+
+    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginBottom="0dp">-->
+
+    <!--</FrameLayout>-->
+
+    <include
+        layout="@layout/content_products"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <!--<android.support.design.widget.BottomNavigationView-->
+    <!--android:id="@+id/navigation"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginEnd="0dp"-->
+    <!--android:layout_marginStart="0dp"-->
+
+    <!--android:background="?android:attr/windowBackground"-->
+    <!--app:layout_anchor="@id/rela"-->
+
+    <!--app:layout_anchorGravity="bottom"-->
+    <!--app:menu="@menu/navigation" />-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frame_layout"
+        android:visibility="gone" />
+    <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
+        android:id="@+id/bottom_navigation"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+
+        android:layout_margin="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        android:fitsSystemWindows="true"
+
+        android:padding="0dp"
+        app:layout_anchorGravity="bottom"
+
+
+        />
+    <!--app:layout_anchorGravity="bottom"-->
+    <!--</android.support.v4.widget.NestedScrollView>-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+
+
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout><!--<include layout="@layout/content_products" />-->
+
+    <!--<android.support.design.widget.FloatingActionButton--><!--android:id="@+id/fab"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_margin="@dimen/fab_margin"--><!--app:layout_anchor="@id/app_bar"--><!--app:layout_anchorGravity="bottom|end"--><!--app:srcCompat="@android:drawable/ic_dialog_email" />-->
+
+    <!--</android.support.design.widget.CoordinatorLayout>-->

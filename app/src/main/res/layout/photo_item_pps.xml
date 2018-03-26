@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="1dp">
+
+    <ImageView
+
+        android:id="@+id/image_thumbnail"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/photobook" />
+
+    <TextView
+        android:id="@+id/txt_quality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.6"
+        android:background="@color/white"
+        android:padding="2dp"
+        android:text="Low quality "
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_anchor="@id/image_thumbnail"
+        app:layout_anchorGravity="center" />
+    <ImageView
+        android:id="@+id/deleteIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:background="@color/colorPrimaryDark"
+        app:layout_anchor="@id/image_thumbnail"
+        app:layout_anchorGravity="top|end"
+        app:srcCompat="@drawable/ic_delete_forever_black_24dp" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/primarytrans"
+
+        android:padding="4dp"
+        android:text="1*"
+        android:textAlignment="center"
+        android:textColor="#ffffff" />
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.erickogi14gmail.photozuri.Views.V1.MyProfile"
+    tools:showIn="@layout/activity_my_profile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+
+                android:id="@+id/camera"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="@drawable/background_bf">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/take_image"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_person_black_24dp"
+                    app:srcCompat="@drawable/ic_person_black_24dp" />
+
+                <TextView
+                    android:id="@+id/txt_take_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/take_image"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="4dp"
+
+                    android:layout_marginStart="4dp"
+                    android:gravity="center_vertical"
+                    android:padding="4dp"
+                    android:text="Add Photo"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/camera"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--<android.support.design.widget.TextInputLayout-->
+
+
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+
+
+                    <!--android:padding="2dp"-->
+                    <!--&gt;-->
+
+                    <EditText
+                        android:id="@+id/txt_firstname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="4dp"
+
+                        android:hint="Names"
+                        android:inputType="textPersonName" />
+                    <!--</android.support.design.widget.TextInputLayout>-->
+
+                    <!--<android.support.design.widget.TextInputLayout-->
+
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+
+                    <!--android:padding="2dp">-->
+
+                    <EditText
+                        android:id="@+id/txt_lastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:hint="@string/last_name_hint"
+                        android:inputType="textPersonName"
+                        android:visibility="gone" />
+                    <!--</android.support.design.widget.TextInputLayout>-->
+
+                    <!--<android.support.design.widget.TextInputLayout-->
+
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+
+                    <!--android:padding="2dp"-->
+                    <!--&gt;-->
+
+                    <EditText
+                        android:id="@+id/txt_emailAdress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="4dp"
+                        android:hint="@string/email_hint"
+                        android:inputType="textEmailAddress" />
+                    <!--</android.support.design.widget.TextInputLayout>-->
+
+                    <!--<android.support.design.widget.TextInputLayout-->
+
+
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:padding="2dp"-->
+
+                    <!--app:hintAnimationEnabled="true">-->
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/txt_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:hint="@string/mobile"
+                        android:inputType="phone" />
+                    <!--</android.support.design.widget.TextInputLayout>-->
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginStart="4dp"
+                        android:background="@color/divider" />
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/material_orange_500"
+                            android:onClick="update"
+                            android:text="Update Profile"
+                            android:textColor="#ffffff" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

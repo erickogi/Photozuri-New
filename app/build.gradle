@@ -1,0 +1,151 @@
+apply plugin: 'com.android.application'
+
+android {
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.photozuri.photozuri"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //vectorDrawables.useSupportLibrary = true
+        vectorDrawables.useSupportLibrary = true
+        vectorDrawables.setUseSupportLibrary(true)
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            multiDexEnabled true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+//resolutionStrategy.force "com.android.support:customtabs:${versions.supportLib}"
+dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-vector-drawable:27.0.1'
+    //  compile 'com.android.support:customtabs:26.1.0'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    // implementation 'io.supercharge:shimmerlayout:2.1.0'
+    testImplementation 'junit:junit:4.12'
+    //implementation 'com.android.support:support-vector-drawable:26.1.0'
+    //implementation 'com.android.support:animated-vector-drawable:26.1.0'
+    //noinspection GradleCompatible
+    //implementation 'com.google.android.gms:play-services-maps:11.8.0'
+    //testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    //compile 'com.google.android.gms:play-services:11.8.0'
+    compile 'joda-time:joda-time:2.9.4'
+    // compile 'com.android.volley:volley:1.0.0'
+
+    compile "com.jakewharton:butterknife:8.8.1"
+    annotationProcessor "com.jakewharton:butterknife-compiler:8.8.1"
+    //nj
+    compile 'com.github.vipulasri:timelineview:1.0.5'
+    //compile 'com.github.Yalantis:SearchFilter:v1.0.4'
+    // compile 'com.github.andremion:floatingnavigationview:1.1.0'
+    // compile 'com.github.GwonHyeok:StickySwitch:0.0.13'
+    // compile 'com.allattentionhere:fabulousfilter:0.0.4'
+    // compile 'com.github.chrisbanes:PhotoView:2.1.3'
+    // compile 'com.github.Yalantis:OfficialFoldingTabBar.Android:v0.9'
+
+    compile('com.mikepenz:materialdrawer:5.9.5@aar') {
+        transitive = true
+        exclude group: 'com.android.support'
+    }
+    //compile 'com.github.nguyenhoanglam:ImagePicker:1.2.1'
+    //compile 'com.specyci:residemenu:1.6'
+    compile('com.wdullaer:materialdatetimepicker:3.3.0') {
+        exclude group: 'com.android.support'
+    }
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'com.muddzdev:styleabletoast:1.0.7'
+    //compile 'q.rorbin:badgeview:1.1.2'
+    compile 'com.android.support:palette-v7:26.1.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    //compile 'com.wang.avi:library:2.1.3'
+    //compile 'com.github.Kennyc1012:BottomSheet:2.4.0'
+    compile 'com.github.chrisbanes:PhotoView:2.1.3'
+    // compile 'com.ramotion.foldingcell:folding-cell:1.2.1'
+
+    compile 'com.google.code.gson:gson:2.8.2'
+    compile 'com.stepstone.stepper:material-stepper:4.3.1'
+    compile 'com.github.eschao:android-PageFlip:1.0.2'
+    //compile 'com.github.clans:fab:1.6.4'
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+
+//    compile ('com.afollestad.material-dialogs:core:0.9.6.0') {
+//        exclude group: 'com.android.support'
+//    }
+    compile 'com.google.firebase:firebase-analytics:11.8.0'
+    compile 'com.google.firebase:firebase-core:11.8.0'
+    // compile 'com.google.firebase:firebase-analytics:11.8.0'
+    //compile 'com.afollestad.material-dialogs:commons:0.9.6.0'
+    compile 'com.google.android.gms:play-services-auth:11.8.0'
+    compile 'com.specyci:residemenu:1.6'
+    // compile 'pub.devrel:easypermissions:0.3.0'
+//    compile('com.google.api-client:google-api-client-android:1.23.0') {
+//        exclude group: 'org.apache.httpcomponents'
+//    }
+//    compile('com.google.apis:google-api-services-drive:v3-rev94-1.23.0') {
+//        exclude group: 'org.apache.httpcomponents'
+//
+//    }
+
+    compile 'com.bdhobare:mpesa:0.0.6'
+    compile 'com.facebook.android:facebook-android-sdk:4.28.0'
+    implementation 'com.facebook.android:facebook-login:4.28.0'
+
+//    implementation ('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar'){
+//        transitive=true
+//    }
+    // compile 'com.google.gms:google-services:3.1.0'
+    compile 'com.karumi:dexter:4.2.0'
+
+
+
+
+
+
+
+    compile 'com.aurelhubert:ahbottomnavigation:2.1.0'
+
+
+    compile 'org.slf4j:slf4j-android:1.6.1-RC1'
+    //com.google.api-client:google-api-client-android:1.23.0
+    //compile 'com.google.gdata:core:1.47.1'
+    compile('com.google.gdata:core:1.47.1') {
+        exclude group: 'com.google.guava', module: 'guava'
+    }
+    compile(group: 'com.google.api-client', name: 'google-api-client', version: '1.23.0') {
+        // Exclude artifacts that the Android SDK provides.
+        exclude(group: 'xpp3', module: 'xpp3') //by both name and group
+        exclude(group: 'org.apache.httpcomponents', module: 'httpclient') //by both name and group
+        exclude(group: 'junit', module: 'junit') //by both name and group
+        exclude(group: 'com.google.android', module: 'android') //by both name and group
+    }
+    compile 'dev.dworks.libs:volleyplus:0.1.4'
+    compile 'com.github.bumptech.glide:glide:4.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+
+
+}
+apply plugin: 'com.google.gms.google-services'

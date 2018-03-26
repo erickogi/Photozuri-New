@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rela"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/white"
+
+
+    android:orientation="vertical"
+    android:padding="0dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.erickogi14gmail.photozuri.Views.ProductsActivity"
+    tools:showIn="@layout/activity_products">
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--tools:showIn="@layout/activity_products"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto">-->
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+
+
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp">
+
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/recyclerView"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+
+
+        android:visibility="gone"
+
+        >
+
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+
+
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="@dimen/fab_margin"
+        android:background="@color/colorPrimary"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_shopping_cart_black_24dp" />
+
+
+    <!--</android.support.v4.widget.NestedScrollView>-->
+
+
+    <!--</android.support.v4.widget.NestedScrollView>-->
+
+</RelativeLayout>

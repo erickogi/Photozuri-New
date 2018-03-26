@@ -1,0 +1,87 @@
+{
+  "project_info": {
+    "project_number": "961390962251",
+    "project_id": "artful-abode-191723"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961390962251:android:888411368e53940f",
+        "android_client_info": {
+          "package_name": "com.erickogi14gmail.photozuri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961390962251-2uri839j52ghole8eajjffj1nokbg909.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "961390962251-pbetcpvq2vsv39nlterq10uh6kn314m8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.erickogi14gmail.photozuri",
+            "certificate_hash": "e0491424e67c5cefd7fcaf4157d6fccb2aecb848"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVS6hWhpqfErQcishnmR05fIR0XYlMFSM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961390962251:android:b1b9764bec5ea6a6",
+        "android_client_info": {
+          "package_name": "com.photozuri.photozuri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961390962251-g312iotugqmthc53sfsv7i01hj0cpfli.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.photozuri.photozuri",
+            "certificate_hash": "e0491424e67c5cefd7fcaf4157d6fccb2aecb848"
+          }
+        },
+        {
+          "client_id": "961390962251-2uri839j52ghole8eajjffj1nokbg909.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVS6hWhpqfErQcishnmR05fIR0XYlMFSM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

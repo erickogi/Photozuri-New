@@ -16,6 +16,7 @@ public class PrefManager {
     // All Shared Preferences Keys
     private static final String KEY_IS_LOGGED_IN = "isLoggedIn";
     private static final String KEY_ACCOUNT_NAME = "key_googleAccount";
+    private static final String KEY_USER_FIREBASETOKEN = "firebasetoken";
 
     private static final String KEY_USER_ID = "UserId";
     private static final String KEY_USER_NAME = "UserName";
@@ -94,7 +95,15 @@ public class PrefManager {
 
         return userData;
     }
+    public void  setKeyUserFirebasetoken(String token){
+        editor.putString(KEY_USER_FIREBASETOKEN,token);
 
+        editor.commit();
+    }
+
+    public String getKeyUserFirebasetoken(){
+        return pref.getString(KEY_USER_FIREBASETOKEN,null);
+    }
     ///SET AND GET USER DATA
     public void setUserData(UserModel userData) {
 
@@ -122,6 +131,7 @@ public class PrefManager {
         editor.commit();
 
     }
+
 
     public String getGoogleAccountName() {
         return pref.getString(KEY_ACCOUNT_NAME, "null");

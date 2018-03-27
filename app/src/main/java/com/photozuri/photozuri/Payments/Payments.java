@@ -13,6 +13,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -104,6 +105,9 @@ public class Payments extends AppCompatActivity implements AuthListener, MpesaLi
     private int notUploadedcount = 0;
     private int uploadedcount = 0;
     private int uploadstatus = 0;
+    private BroadcastReceiver mRegistrationBroadcastReceiver;
+    public static final String  NOTIFICATION = "PushNotification";
+
     private BroadcastReceiver codeReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -217,7 +221,7 @@ public class Payments extends AppCompatActivity implements AuthListener, MpesaLi
         //  Mpesa.with(Payments.this, ApiConstants.safaricom_Auth_key, ApiConstants.safaricom_Secret, Mode.SANDBOX);
 
         initMpesa();
-        registerReceiver(codeReceiver, new IntentFilter("com.photo.codereceived"));
+        //registerReceiver(codeReceiver, new IntentFilter("com.photo.codereceived"));
 
         paynow = findViewById(R.id.buttonCheckOut);
         linearpay = findViewById(R.id.linear_pay);
@@ -280,6 +284,36 @@ public class Payments extends AppCompatActivity implements AuthListener, MpesaLi
 
 
         }
+
+
+        mRegistrationBroadcastReceiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                if (intent.getAction().equals(NOTIFICATION)) {
+                    String title = intent.getStringExtra("title");
+                    String message = intent.getStringExtra("message");
+                    int code = intent.getIntExtra("code", 0);
+
+                    try {
+
+                        btnUpload.setVisibility(View.VISIBLE);
+
+                        if (progressDialog != null && progressDialog.isShowing()) {
+                            progressDialog.dismiss();
+                        }
+                        updatePaid(titleModel.getTitle_id());
+                        changeView();
+
+                    } catch (NullPointerException nm) {
+                        nm.printStackTrace();
+                        Log.d("closeoperation", nm.toString());
+                    }
+
+                    // showDialog(title, message, code);
+
+                }
+            }
+        };
     }
 
     private ArrayList<MyImage> getMyImages() {
@@ -1081,5 +1115,20 @@ public class Payments extends AppCompatActivity implements AuthListener, MpesaLi
         });
 
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        LocalBroadcastManager.getInstance(this).registerReceiver(mRegistrationBroadcastReceiver,
+                new IntentFilter(NOTIFICATION));
+    }
+
+    @Override
+    protected void onPause() {
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mRegistrationBroadcastReceiver);
+
+        super.onPause();
     }
 }

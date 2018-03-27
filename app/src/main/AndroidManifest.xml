@@ -195,6 +195,21 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/imagepicker_file_paths" />
         </provider>
+        <service android:name=".NetworkUtills.FireBase.Firebase">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".NetworkUtills.FireBase.FirebaseService"
+            android:enabled="true"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
 
         <activity
             android:name=".ScActivity"

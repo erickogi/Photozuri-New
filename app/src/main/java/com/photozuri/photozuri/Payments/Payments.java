@@ -802,8 +802,9 @@ public class Payments extends AppCompatActivity implements AuthListener, MpesaLi
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mRegistrationBroadcastReceiver);
 
-        unregisterReceiver(codeReceiver);
+        //unregisterReceiver(codeReceiver);
 
     }
 
